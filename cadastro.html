@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+        <title>Cadastro</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Ephesis&family=PT+Serif&family=Source+Serif+4:opsz,wght@8..60,500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <form name="form1" method="post" action="grava.jsp">
+                <fieldset>
+                    <div class="login-box">
+                    <h1>Cadastre-se:</h1>
+                        <div>
+
+                            <div>
+                                <label for="textNome">Nome:</label>
+                                <input type="text" name="txtNome" id="txtNome" placeholder="Primeiro nome">
+                                <span id="erroNome"></span>
+                                <br>
+                            </div>
+                        </div>
+                        
+                        <div >
+                            <div>
+                                <label for="textEmail">Email:</label>
+                                <input type="text" name="txtEmail" id="txtEmail" placeholder="E-mail">
+                                <span id="erroEmail"></span>
+                                <br>
+                            </div>
+
+                            <div>
+                                <label for="textSenha">CPF:</label>
+                                <input type="text" name="txtCPF" id="txtCPF" placeholder="CPF" maxlength="11">
+                                <span id="erroCPF"></span>
+                                <br>
+                            </div>
+
+                            <div>
+                                <label for="textSenha">Senha:</label>
+                                <input type="password" name="txtSenha" id="txtSenha" placeholder="Senha">
+                                <span id="erroSenha"></span>
+                                <br><br>
+                            </div>
+                        
+                    </div>
+                        
+                            <!-- Botões -->
+                            <div class="botoes">
+                                    <button type="button" value="Gravar" onclick="verificar()">Cadastrar</button>
+                            
+                                     <a href="login.html"><button class="btn btn-outline-success" type="button">Voltar</button></a>
+                            </div>
+
+                            <script>
+                                function verificar() {
+                                    var n = document.form1.txtNome.value;
+                                    var e = document.form1.txtEmail.value;
+                                    var c = document.form1.txtCPF.value;
+                                    var s = document.form1.txtSenha.value;
+
+                                    var enviar = true;
+                                    if ( n == "") {
+                                        document.getElementById("erroNome").textContent = "*Preencha o campo nome!";
+                                        document.getElementById("txtNome").style.backgroundColor = "#FFA07A";
+                                        enviar = false;
+                                    }
+                                    else {
+                                        document.getElementById("erroNome").textContent = "";
+                                        document.getElementById("txtNome").style.backgroundColor = "";
+                                    }
+
+
+                                    if ( e == "" ) {
+                                        document.getElementById("erroEmail").textContent = "*Preencha o campo e-mail!";
+                                        document.getElementById("txtEmail").style.backgroundColor = "#FFA07A";
+                                        enviar = false;
+                                    }
+                                    else {
+                                        document.getElementById("erroEmail").textContent = "";
+                                        document.getElementById("txtEmail").style.backgroundColor = "";
+                                    }
+
+                                    if ( isNaN(c) ) {
+                                        document.getElementById("erroCPF").textContent = "*Preencha o campo corretamente!";
+                                        document.getElementById("txtCPF").style.backgroundColor = "#FFA07A";
+                                        enviar = false;
+                                    }
+                                    else if ( c == "") {
+                                        document.getElementById("erroCPF").textContent = "*Preencha o campo CPF!";
+                                        document.getElementById("txtCPF").style.backgroundColor = "#FFA07A";
+                                        enviar = false;
+                                    }
+                                    else {
+                                        document.getElementById("erroCPF").textContent = "";
+                                        document.getElementById("txtCPF").style.backgroundColor = "";
+                                    }
+
+
+                                    if ( s == "" ) {
+                                        document.getElementById("erroSenha").textContent = "*Preencha o campo senha!";
+                                        document.getElementById("txtSenha").style.backgroundColor = "#FFA07A";
+                                        enviar = false;
+                                    }
+                                    else {
+                                        document.getElementById("erroSenha").textContent = "";
+                                        document.getElementById("txtSenha").style.backgroundColor = "";
+                                    }
+                                    if(enviar){
+                                        document.form1.submit()
+                                    }
+                                }
+                            </script>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

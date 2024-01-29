@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#principal {
+	padding: 15px;
+	text-align: center;
+}
+
+
+.degrade {
+	background: linear-gradient(to right, #006DA4, #032030);
+}
+
+#area-logo {
+	padding: 10px;
+	font-family: 'Ephesis', cursive;
+	font-size: 32px;
+	color: #8AAEE0;
+}
+
+#area-menu {
+	padding: 10px;
+	font-family: 'PT Serif', serif;
+	font-size: 17px;
+}
+
+#area-menu {
+	padding: 15px;
+}
+
+#conteudo-lateral {
+	border: 1px solid black;	
+	background: #C0C0C0;
+	padding: 25px;
+	border-radius: 32px;
+	font-family: 'Source Serif 4', serif;
+}
+
+#conteudo {
+	background: #C0C0C0;
+	padding: 25px;
+	border-radius: 32px;
+	border: 1px solid black;
+	font-family: 'Source Serif 4', serif;
+
+}
+
+body {
+	font-size: 1em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: #e6e6e6;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+h1 {
+	color: white;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: white;
+	background: black;
+}
+
+
+#principal a:link, #principal a:visited {
+	color: #FFF;
+	padding: 8px 12px;
+}
+
+#rodape {
+	clear: both;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 170px 1fr;
+	grid-gap: 3rem;
+	padding: 25px;
+}
+
+footer {
+	text-align: center;
+	color: white;
+}
+
+img {
+	border: 5px solid #696969;
+	border-radius: 32px;
+}
+
+hr {
+	border-color: #1C1C1C;
+}
+
+.alinhar {
+	text-align: center;
+}
+
+/* Cor das caixas do sidebar */
+.azul {
+	background: #A9A9A9;
+	padding: 5px;
+}
+
+.espaco {
+	margin: 5px;
+}
+
+.cor {
+	color:#006DA4;
+}
+
+.produtos_ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+	gap: 15px;
+}
+
+.imagens {
+	height: 280px;
+	width: 190px;
+}
+
+.alinhamento_index {
+	display: flex;
+}
+
+.centro {
+	text-align: center;
+}
+
